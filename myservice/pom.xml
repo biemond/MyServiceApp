@@ -18,12 +18,12 @@
            for properties like serverUrl, etc. to the SOA common parent POM, so that you
            do not have to specify them over and over in every project POM.
     -->
-    <parent>
+    <!--parent>
         <groupId>com.oracle.soa</groupId>
         <artifactId>sar-common</artifactId>
         <version>12.1.3-0-0</version>
         <relativePath></relativePath>
-    </parent>
+    </parent-->
 
     <parent>
         <groupId>MyServiceApp</groupId>
