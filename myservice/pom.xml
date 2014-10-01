@@ -80,7 +80,7 @@
                 <configuration>
                     <compositeName>myservice</compositeName>
                     <composite>${scac.input}</composite>
-                    <sarLocation>${scac.output.dir}/sca_${project.artifactId}_rev${version}.sar</sarLocation>
+                    <sarLocation>${scac.output.dir}/sca_${project.artifactId}_rev${version}.jar</sarLocation>
                     <serverUrl>${serverUrl}</serverUrl>
                     <!-- note: compositeRevision is needed to package, revision is needed to undeploy -->
                     <compositeRevision>${composite.revision}</compositeRevision>

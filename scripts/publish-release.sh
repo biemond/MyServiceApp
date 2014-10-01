@@ -14,7 +14,7 @@ curl \
   --form g=oracle.demo \
   --form a=myservice \
   --form v="$VERSION" \
-  --form e=sar \
-  --form p=sar \
-  --form file="@artifacts/sca_myservice_rev$VERSION.sar" \
+  --form e=jar \
+  --form p=jar \
+  --form file="@artifacts/sca_myservice_rev$VERSION.jar" \
   http://localhost:8081/nexus/service/local/artifact/maven/content
