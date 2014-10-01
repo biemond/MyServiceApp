@@ -54,6 +54,7 @@
              line and point it to your jndi.properties file. -->
         <jndi.properties.input>${project.basedir}/jndi.properties</jndi.properties.input>
         <result>${project.basedir}/target</result>
+        <format>junit</format>
         <!--  input is the name of the composite to run test suties against -->
 	      <input>myservice</input>
     </properties>
