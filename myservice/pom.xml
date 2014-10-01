@@ -25,6 +25,14 @@
         <relativePath></relativePath>
     </parent>
 
+    <parent>
+        <groupId>MyServiceApp</groupId>
+        <artifactId>MyServiceApp</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+
     <properties>
         <!-- these parameters are used by the compile goal -->
         <scac.input.dir>${project.basedir}/SOA/</scac.input.dir>
