@@ -5,18 +5,18 @@
     <artifactId>myservice</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>sar</packaging>
-    
+
     <!--
            This POM was generated from the SOA Maven Archetype.
            Comments in this POM guide you how to use it with your project.
            This POM relates to this SOA Composite, i.e. the one in this same directory.
-           There is another POM in the SOA Application directory (up one) which handles 
+           There is another POM in the SOA Application directory (up one) which handles
            the whold SOA Application, which may contain additional projects.
 
-           The parent points to the common SOA parent POM.  That is a special POM that is 
+           The parent points to the common SOA parent POM.  That is a special POM that is
            shipped by Oracle as a point of customization (only).  You can add default values
            for properties like serverUrl, etc. to the SOA common parent POM, so that you
-           do not have to specify them over and over in every project POM. 
+           do not have to specify them over and over in every project POM.
     -->
     <parent>
         <groupId>com.oracle.soa</groupId>
@@ -24,7 +24,7 @@
         <version>12.1.3-0-0</version>
         <relativePath></relativePath>
     </parent>
-    
+
     <properties>
         <!-- these parameters are used by the compile goal -->
         <scac.input.dir>${project.basedir}/SOA/</scac.input.dir>
@@ -33,7 +33,7 @@
         <scac.output>${scac.output.dir}/out.xml</scac.output>
         <scac.error>${scac.output.dir}/error.txt</scac.error>
         <scac.displayLevel>1</scac.displayLevel>
-        <!-- if you are using a config plan, uncomment the following line and update to point 
+        <!-- if you are using a config plan, uncomment the following line and update to point
              to your config plan -->
         <!--<configplan>${scac.input.dir}/configplan.xml</configplan>-->
 
@@ -52,14 +52,14 @@
         <!-- these parameters are used by the test goal -->
         <!-- if you are using the sca-test (test) goal, you need to uncomment the following
              line and point it to your jndi.properties file. -->
-        <jndi.properties.input>${basedir}/jndi.properties</jndi.properties.input>
-        <scatest.result>${scac.output.dir}/testResult</scatest.result>
+        <jndi.properties.input>${project.basedir}/jndi.properties</jndi.properties.input>
+        <result>${project.basedir}/target</result>
         <!--  input is the name of the composite to run test suties against -->
-	<input>myservice</input>
+	      <input>myservice</input>
     </properties>
 
     <!--
-           These refer to the properties defined above.  You should probably not need to make 
+           These refer to the properties defined above.  You should probably not need to make
            any changes beflow this point - these just point to the properties above.
     -->
     <build>
@@ -77,22 +77,22 @@
                     <compositeRevision>${composite.revision}</compositeRevision>
                     <revision>${composite.revision}</revision>
                     <scacInputDir>${scac.input.dir}</scacInputDir>
-                    <!-- note: if this composite contains a component that depends on 
-                         MDS to build, e.g. a Human Task or Business Rule, then you 
+                    <!-- note: if this composite contains a component that depends on
+                         MDS to build, e.g. a Human Task or Business Rule, then you
                          will need to uncomment the next line, and edit it to point
                          to your application directory (which contains .adf/adf-config.xml
                          file with MDS configuration in it -->
                     <!--<appHome>${project.basedir}/..</appHome>-->
-                    <!--  If you have a composite which contains a component that 
-                          depends on MDS (eg. Human Task, Business Rule) AND you 
+                    <!--  If you have a composite which contains a component that
+                          depends on MDS (eg. Human Task, Business Rule) AND you
                           want to use a file-based MDS repository, then you
                           need to do either:
                           1. update the .adf/META-INF/adf-config.xml to point to
                              the correct location of the file based repository, i.e.
                              remove the reference to ${oracle.home} in that file, or
                           2. define oracleHome here and leave the adf-config.xml file
-                             as is.  Note that the correct value is the path to 
-                             your SOA Quickstart or JDeveloper install directory, 
+                             as is.  Note that the correct value is the path to
+                             your SOA Quickstart or JDeveloper install directory,
                              with "/soa" appended to it.
                     -->
                     <!--<oracleHome>JDEV_HOME/soa</oracleHome>-->
@@ -116,5 +116,5 @@
       <url>http://localhost:8081/nexus/content/repositories/snapshots</url>
       <uniqueVersion>false</uniqueVersion>
     </snapshotRepository>
-  </distributionManagement>    
+  </distributionManagement>
 </project>
